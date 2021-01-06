@@ -98,8 +98,10 @@ body {
       <tr>
     <th>SL</th>
     <th>Booking ID</th>
-    <th>Seat_Number</th>
+    <th>Seat Number</th>
     <th>Price</th>
+    <th>Journey Date</th>
+    <th>Trip ID</th>
     
       </tr>
  @foreach ($bookingdeta as $key=>$bookingdel )
@@ -109,6 +111,8 @@ body {
         <td>{{$bookingdel->booking_id}}</td>
         <td>{{$bookingdel->seat_number}}</td>
         <td>{{$bookingdel->price}}</td>
+        <td>{{$bookingdel->journey_date}}</td>
+        <td>{{$bookingdel->trip_id}}</td>
         
     </tr>
         

@@ -18,6 +18,8 @@ class CreateBookingdetailsTable extends Migration
             $table->string('booking_id');
             $table->string('seat_number');
             $table->string('price');
+            $table->string('journey_date');
+            $table->string('trip_id');
             $table->timestamps();
         });
     }

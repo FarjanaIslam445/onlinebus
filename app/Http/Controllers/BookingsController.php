@@ -12,7 +12,7 @@ class BookingsController extends Controller
     public function bookingtable()
     {
         $bookings = Booking::all();
-        $lookingDate=Homepage::all();
+        $bookingDate=Homepage::all();
         // dd($lookingDate);
         
         return view('bookingtable',compact('bookings'));
@@ -21,6 +21,7 @@ class BookingsController extends Controller
    
    { 
        $bookingdeta = Bookingdetail::all();
+       
     
         return view('bookingdetails',compact('bookingdeta'));
     }

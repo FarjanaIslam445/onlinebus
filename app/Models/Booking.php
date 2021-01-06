@@ -14,4 +14,9 @@ class Booking extends Model
         'journey_date',
         'trip_id',
     ];
+
+    public function details()
+    {
+        return $this->hasMany(BookingDetail::class);
+    }
 }

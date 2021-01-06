@@ -12,6 +12,7 @@ class Bookingdetail extends Model
         'booking_id',
         'seat_number',
         'price',
-        
+        'journey_date',
+        'trip_id',
     ];
 }

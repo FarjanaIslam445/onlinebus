@@ -89,7 +89,10 @@ body {
 
 </body>
 <body>
-
+<div  style="display:flex; justify-content:flex-end;     margin-right: 51px;
+    margin-top: 20;">
+<a href="{{route('bookingdetails')}}" class="btn btn-success">Go Deteails</a>
+</div>
 <div class="container">
   <h1>Available Trips</h1>
              

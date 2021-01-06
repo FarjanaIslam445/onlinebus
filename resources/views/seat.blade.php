@@ -313,9 +313,10 @@ ol {
   
 </div>
 <input type="hidden" value="{{$id}}" name="trip_id">
+<input type="hidden" value="{{$date}}" name="date">
 <div class="plane">
   <div class="cockpit">
-    <h1>Please select a Seat</h1>
+    <h2>Please select a Seat on{{$date}}</h2>
   </div>
   <div class="exit exit--front fuselage">
     
@@ -324,21 +325,21 @@ ol {
     
       <ol class="seats" type="A">
         <li class="seat">
-          <input type="checkbox"   value="A1" name="Seat_number[]" id="A1" />
+          <input @if(in_array('A1',$booked->toArray())) disabled @endif type="checkbox"   value="A1" name="Seat_number[]" id="A1" />
           <label for="A1">A1</label>
         </li>
          
         <li class="seat">
-          <input type="checkbox" value="A2" name="Seat_number[]" id="A2" />
+          <input @if(in_array('A2',$booked->toArray())) disabled @endif type="checkbox" value="A2" name="Seat_number[]" id="A2" />
           <label for="A2">A2</label>
         </li>
        
         <li class="seat">
-          <input type="checkbox" value="A3" name="Seat_number[]" id="A3" />
+          <input @if(in_array('A3',$booked->toArray())) disabled @endif type="checkbox" value="A3" name="Seat_number[]" id="A3" />
           <label for="A3">A3</label>
         </li>
         <li class="seat">
-          <input type="checkbox" value="A4" name="Seat_number[]" id="A4" />
+          <input @if(in_array('A4',$booked->toArray())) disabled @endif type="checkbox" value="A4" name="Seat_number[]" id="A4" />
           <label for="A4">A4</label>
         </li>
 
@@ -347,20 +348,20 @@ ol {
     <li class="row row--2">
       <ol class="seats" type="A">
         <li class="seat">
-          <input type="checkbox" value="B1" name="Seat_number[]"id="B2" />
+          <input @if(in_array('B1',$booked->toArray())) disabled @endif type="checkbox" value="B1" name="Seat_number[]"id="B2" />
           <label for="B1">B1</label>
         </li>
         <li class="seat">
-          <input type="checkbox"value="B2" name="Seat_number[]" id="B2" />
+          <input @if(in_array('B2',$booked->toArray())) disabled @endif type="checkbox"value="B2" name="Seat_number[]" id="B2" />
           <label for="2B">2B</label>
         </li>
      
         <li class="seat">
-          <input type="checkbox"value="B3" name="Seat_number[]" id="B3" />
+          <input @if(in_array('B3',$booked->toArray())) disabled @endif type="checkbox"value="B3" name="Seat_number[]" id="B3" />
           <label for="B3">B3</label>
         </li>
         <li class="seat">
-          <input type="checkbox" value="B4" name="Seat_number[]" id="B4" />
+          <input @if(in_array('B4',$booked->toArray())) disabled @endif type="checkbox" value="B4" name="Seat_number[]" id="B4" />
           <label for="B4">B4</label>
         </li>
        
@@ -369,19 +370,19 @@ ol {
     <li class="row row--3">
       <ol class="seats" type="A">
         <li class="seat">
-          <input type="checkbox" value="C1" name="Seat_number[]" id="C1" />
+          <input @if(in_array('C1',$booked->toArray())) disabled @endif  type="checkbox" value="C1" name="Seat_number[]" id="C1" />
           <label for="C1">C1</label>
         </li>
         <li class="seat">
-          <input type="checkbox" value="C2" name="Seat_number[]" id="C2" />
+          <input @if(in_array('C2',$booked->toArray())) disabled @endif type="checkbox" value="C2" name="Seat_number[]" id="C2" />
           <label for="C2">C2</label>
         </li>
         <li class="seat">
-          <input type="checkbox"  value="C3" name="Seat_number[]"id="C3" />
+          <input @if(in_array('C3',$booked->toArray())) disabled @endif type="checkbox"  value="C3" name="Seat_number[]"id="C3" />
           <label for="C3">C3</label>
         </li>
         <li class="seat">
-          <input type="checkbox" value="C4" name="Seat_number[]" id="C4" />
+          <input @if(in_array('C4',$booked->toArray())) disabled @endif type="checkbox" value="C4" name="Seat_number[]" id="C4" />
           <label for="C4">C4</label>
         </li>
 
@@ -391,19 +392,19 @@ ol {
     <li class="row row--4">
       <ol class="seats" type="A">
         <li class="seat">
-          <input type="checkbox"  value="D1" name="Seat_number[]"id="D1" />
+          <input @if(in_array('D1',$booked->toArray())) disabled @endif type="checkbox"  value="D1" name="Seat_number[]"id="D1" />
           <label for="D1">D1</label>
         </li>
         <li class="seat">
-          <input type="checkbox" value="D2" name="Seat_number[]" id="D2" />
+          <input @if(in_array('D2',$booked->toArray())) disabled @endif type="checkbox" value="D2" name="Seat_number[]" id="D2" />
           <label for="D2">D2</label>
         </li>
         <li class="seat">
-          <input type="checkbox" value="D3" name="Seat_number[]" id="D3" />
+          <input @if(in_array('D3',$booked->toArray())) disabled @endif type="checkbox" value="D3" name="Seat_number[]" id="D3" />
           <label for="D3">D3</label>
         </li>
         <li class="seat">
-          <input type="checkbox" value="D4" name="Seat_number[]" id="D4" />
+          <input @if(in_array('D4',$booked->toArray())) disabled @endif type="checkbox" value="D4" name="Seat_number[]" id="D4" />
           <label for="D4">D4</label>
         </li>
 
@@ -413,19 +414,19 @@ ol {
     <li class="row row--5">
       <ol class="seats" type="A">
         <li class="seat">
-          <input type="checkbox" value="E1" name="Seat_number[]" id="E1" />
+          <input @if(in_array('E1',$booked->toArray())) disabled @endif type="checkbox" value="E1" name="Seat_number[]" id="E1" />
           <label for="E1">E1</label>
         </li>
         <li class="seat">
-          <input type="checkbox" value="E2" name="Seat_number[]" id="E2" />
+          <input @if(in_array('E2',$booked->toArray())) disabled @endif type="checkbox" value="E2" name="Seat_number[]" id="E2" />
           <label for="E2">E2</label>
         </li>
         <li class="seat">
-          <input type="checkbox"value="E3" name="Seat_number[]" id="E3" />
+          <input @if(in_array('E3',$booked->toArray())) disabled @endif type="checkbox"value="E3" name="Seat_number[]" id="E3" />
           <label for="E3">E3</label>
         </li>
         <li class="seat">
-          <input type="checkbox" value="E4" name="Seat_number[]" id="E4" />
+          <input @if(in_array('E4',$booked->toArray())) disabled @endif type="checkbox" value="E4" name="Seat_number[]" id="E4" />
           <label for="E4">E4</label>
         </li>
 
@@ -435,19 +436,19 @@ ol {
     <li class="row row--6">
       <ol class="seats"  type="A">
         <li class="seat">
-          <input type="checkbox" value="F1" name="Seat_number[]" id="F1" />
+          <input @if(in_array('F1',$booked->toArray())) disabled @endif type="checkbox" value="F1" name="Seat_number[]" id="F1" />
           <label for="F1">F1</label>
         </li>
         <li class="seat">
-          <input type="checkbox" value="F2" name="Seat_number[]" id="F2" />
+          <input @if(in_array('F2',$booked->toArray())) disabled @endif type="checkbox" value="F2" name="Seat_number[]" id="F2" />
           <label for="F2">F2</label>
         </li>
         <li class="seat">
-          <input type="checkbox"  value="F3" name="Seat_number[]" id="F3" />
+          <input @if(in_array('F3',$booked->toArray())) disabled @endif type="checkbox"  value="F3" name="Seat_number[]" id="F3" />
           <label for="F3">F3</label>
         </li>
         <li class="seat">
-          <input type="checkbox"  value="F4" name="Seat_number[]"id="F4" />
+          <input  @if(in_array('F4',$booked->toArray())) disabled @endif type="checkbox"  value="F4" name="Seat_number[]"id="F4" />
           <label for="F4">F4</label>
         </li>
         
@@ -457,19 +458,19 @@ ol {
     <li class="row row--7">
       <ol class="seats" type="A">
         <li class="seat">
-          <input type="checkbox" value="G1" name="Seat_number[]" id="G1" />
+          <input @if(in_array('G1',$booked->toArray())) disabled @endif type="checkbox" value="G1" name="Seat_number[]" id="G1" />
           <label for="G1">G1</label>
         </li>
         <li class="seat">
-          <input type="checkbox" value="G2" name="Seat_number[]" id="G2" />
+          <input @if(in_array('G2',$booked->toArray())) disabled @endif type="checkbox" value="G2" name="Seat_number[]" id="G2" />
           <label for="G2">G2</label>
         </li>
         <li class="seat">
-          <input type="checkbox" value="G3" name="Seat_number[]" id="G3" />
+          <input @if(in_array('G3',$booked->toArray())) disabled @endif type="checkbox" value="G3" name="Seat_number[]" id="G3" />
           <label for="G3">G3</label>
         </li>
         <li class="seat">
-          <input type="checkbox" value="G4" name="Seat_number[]" id="G4" />
+          <input @if(in_array('G4',$booked->toArray())) disable @endif type="checkbox" value="G4" name="Seat_number[]" id="G4" />
           <label for="G4">G4</label>
         </li>
 
@@ -479,19 +480,19 @@ ol {
     <li class="row row--8">
       <ol class="seats" type="A">
         <li class="seat">
-          <input type="checkbox" value="H1" name="Seat_number[]" id="H1" />
+          <input @if(in_array('H1',$booked->toArray())) disable @endif type="checkbox" value="H1" name="Seat_number[]" id="H1" />
           <label for="H1">H1</label>
         </li>
         <li class="seat">
-          <input type="checkbox"  value="H2" name="Seat_number[]"id="H2" />
+          <input @if(in_array('H2',$booked->toArray())) disable @endif type="checkbox"  value="H2" name="Seat_number[]"id="H2" />
           <label for="H@">H2</label>
         </li>
         <li class="seat">
-          <input type="checkbox" value="H3" name="Seat_number[]" id="H3" />
+          <input @if(in_array('H3',$booked->toArray())) disable @endif type="checkbox" value="H3" name="Seat_number[]" id="H3" />
           <label for="H3">H3</label>
         </li>
         <li class="seat">
-          <input type="checkbox"  value="H4" name="Seat_number[]"id="H4" />
+          <input @if(in_array('H4',$booked->toArray())) disable @endif type="checkbox"  value="H4" name="Seat_number[]"id="H4" />
           <label for="H4">H4</label>
         </li>
 
@@ -501,19 +502,19 @@ ol {
     <li class="row row--9">
       <ol class="seats" type="A">
         <li class="seat">
-          <input type="checkbox" value="I1" name="Seat_number[]" id="I1" />
+          <input @if(in_array('I1',$booked->toArray())) disable @endif type="checkbox" value="I1" name="Seat_number[]" id="I1" />
           <label for="I1">I1</label>
         </li>
         <li class="seat">
-          <input type="checkbox" value="I2" name="Seat_number[]" id="I2" />
+          <input @if(in_array('I2',$booked->toArray())) disable @endif type="checkbox" value="I2" name="Seat_number[]" id="I2" />
           <label for="I2">I2</label>
         </li>
         <li class="seat">
-          <input type="checkbox" value="I3" name="Seat_number[]" id="I3" />
+          <input  @if(in_array('I3',$booked->toArray())) disable @endif type="checkbox" value="I3" name="Seat_number[]" id="I3" />
           <label for="I3">I3</label>
         </li>
         <li class="seat">
-          <input type="checkbox"value="I4" name="Seat_number[]" id="I4" />
+          <input @if(in_array('I4',$booked->toArray())) disable @endif type="checkbox"value="I4" name="Seat_number[]" id="I4" />
           <label for="I4">I4</label>
         </li>
 
@@ -523,19 +524,19 @@ ol {
     <li class="row row--10">
       <ol class="seats" type="A">
         <li class="seat">
-          <input type="checkbox" value="J1" name="Seat_number[]" id="J1" />
+          <input  @if(in_array('J1',$booked->toArray())) disable @endif type="checkbox" value="J1" name="Seat_number[]" id="J1" />
           <label for="J1">J1</label>
         </li>
         <li class="seat">
-          <input type="checkbox"value="J2" name="Seat_number[]" id="J2" />
+          <input @if(in_array('J2',$booked->toArray())) disable @endif type="checkbox"value="J2" name="Seat_number[]" id="J2" />
           <label for="J2">J2</label>
         </li>
         <li class="seat">
-          <input type="checkbox"value="J3" name="Seat_number[]" id="J3" />
+          <input @if(in_array('J3',$booked->toArray())) disable @endif type="checkbox"value="J3" name="Seat_number[]" id="J3" />
           <label for="J3">J3</label>
         </li>
         <li class="seat">
-          <input type="checkbox" value="J4" name="Seat_number[]" id="J4" />
+          <input @if(in_array('J4',$booked->toArray())) disable @endif type="checkbox" value="J4" name="Seat_number[]" id="J4" />
           <label for="J4">J4</label>
         </li>
 
