@@ -15,9 +15,10 @@ class UsersController extends Controller
             
         $this->validate($request,[
             'name' =>  'required',
+            'username' =>'required',
             'email' =>  'required',
             'phone' =>  'required',
-            'role' =>  'required',
+            
             'password'=>'required',
             
            ]);
@@ -26,9 +27,10 @@ class UsersController extends Controller
     
            $users = new User();
            $users->name  = $request->input('name');
+           $users->username  = $request->input('username');
            $users->email  = $request->input('email');
            $users->phone  = $request->input('phone');
-           $users->role  = $request->input('role');
+        //    $users->role  = $request->input('role');
            $users->password  = bcrypt($request->input('password'));
 
 
@@ -38,7 +40,7 @@ class UsersController extends Controller
            
            
     
-           return redirect()->back()->with('msg','Submit Successfully.');
+           return redirect()->back()->with('msg','Registration Successfully.');
         }
            public function userview(){
                

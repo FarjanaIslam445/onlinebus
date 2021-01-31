@@ -69,7 +69,13 @@ public function locationupdate(Request $request,$id)
     $locations->save();
     return redirect(route('locationlist'))->with('msg','Upadte Successfully.');
 }
+public function locationdelete($id){
+    Location::find($id)->delete();
+    return redirect()->back()->with('msg','Submit Successfully.');
+}
 
+
+}
 
 
            
@@ -81,4 +87,4 @@ public function locationupdate(Request $request,$id)
 
 
 
-}
+

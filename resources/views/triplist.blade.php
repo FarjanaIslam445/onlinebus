@@ -25,6 +25,8 @@
   </tr>
   @foreach($trips as $key=> $triplist)
   
+
+  
   <tr>
      <td>{{$key +1}}</td>
      <td>{{$triplist->date}}</td>

@@ -95,14 +95,14 @@ body {
 <body>
 
 <div class="header">
-  <a href="#default" class="logo">Online Bus Ticket Booking System</a>
+  <a href="{{route('frontpage')}}" class="logo" style="text-decoration: none">Online Bus Ticket Booking System</a>
   <div class="header-right">
-    <a class="" href="{{route('frontpage')}}">Home</a>
-    <a href="{{route('userform')}}">Sign In</a>
-    @guest<a href="{{route('loginform')}}">Log In</a>@endguest
-    @auth<a href="{{route('logout')}}">Log Out</a>@endauth
-    <a href="{{route('frontpage')}}">Contact Us</a>
-    <a href="{{route('frontpage')}}">FAQ</a>
+    <a class="" href="{{route('frontpage')}}" style="text-decoration: none">Home</a>
+    @guest<a href="{{route('userform')}}"style="text-decoration: none">Sign In</a>@endguest
+    @guest<a href="{{route('loginform')}}"style="text-decoration: none">Log In</a>@endguest
+    @auth<a href="{{route('logout')}}"style="text-decoration: none">Log Out</a>@endauth
+    <a href="{{route('frontpage')}}"style="text-decoration: none">Contact Us</a>
+    
     
   </div>
 </div>
@@ -117,7 +117,12 @@ body {
 			<div class="container">
 				<div class="row">
 					<div class="booking-cta">
-          @if(session()->has('msg'))
+         
+<form method="post" action="{{route('userinsert')}}">
+@csrf
+<div class="container">
+	<div class="row" style="padding: 50px 350px;">
+ @if(session()->has('msg'))
     <p class="alert alert-success">{{session()->get('msg')}}</p>
 @endif
 
@@ -127,60 +132,42 @@ body {
     @endforeach
 @endif
 
-<form method="post" action="{{route('userinsert')}}">
-@csrf
-						<h1>Sign Up Here</h1>
-					</div>
-					<div class="booking-form">
-						<form>
-							<div class="col-md-8">
-								<div class="form-group">
-									<span class="form-label">Your Name*</span>
-									<input class="form-control" type="text" required id="name" name="name" placeholder="Enter Your Name">
-								</div>
-							</div>
-							<div class="col-md-8">
-								<div class="form-group">
-									<span class="form-label">Your Email*</span>
-									<input class="form-control" type="email" required id="email"  name="email"  placeholder="Enter Your Email">
-								</div>
-							</div>
-							<div class="col-md-8">
-								<div class="form-group">
-									<span class="form-label">Your Contact*</span>
-									<input class="form-control" type="phone" required id="phone" name="phone"  placeholder="Enter Your Contact">
-								</div>
-							</div>
-							<div class="col-md-8">
-								<div class="form-group">
-									<span class="form-label">Address*</span>
-                  
-							  	<input class="form-control" type="text" required id="address" name="address" placeholder="Enter Your Address">
-								</div>
-							</div>
-							<div class="col-md-8">
-								<div class="form-group">
-									<span class="form-label">Role*</span>
-									<input class="form-control" type="role" required id="role" name="role" placeholder="Role">
-								</div>
-							</div>
-              <div class="col-md-8">
-								<div class="form-group">
-									<span class="form-label">Password*</span>
-									<input class="form-control" type="password" required id="password" name="password" placeholder="Password">
-								</div>
-							</div>
-							<div class="col-md-4">
-								<div class="form-btn">
-									<button class="submit-btn">Register</button>
-								</div>
-							</div>
-						</form>
-					</div>
-				</div>
-			</div>
+
+
+		<main class="form-signin">
+  <form>
+    <div style="display: flex;justify-content: center;">
+    <div>
+        <div style="display:flex;justify-content:center;">
+			<img class="mb-4" src="https://cdn3.vectorstock.com/i/1000x1000/11/02/bus-ticket-book-online-banner-vector-27931102.jpg" alt="" width="72" height="57">
 		</div>
+    <h1 class="h3 mb-3 fw-normal">Please Sign Up</h1>
+    </div>
+</div>
+    <label for="name" class="visually-hidden">First Name</label>
+    <input type="text" id="name" class="form-control" placeholder="First Name" name="name" autofocus="">
+	<label for="name" class="visually-hidden">Last Name</label>
+    <input type="text" id="username" class="form-control" placeholder="Last Name" name="username" autofocus="">
+	<label for="inputEmail" class="visually-hidden">Email address</label>
+    <input type="email" id="email" class="form-control" placeholder="Email address" name="email" autofocus="">
+	<label for="inputEmail" class="visually-hidden">Contact</label>
+    <input type="phone" id="phone" class="form-control" placeholder="Contact" name="phone" autofocus="">
+	
+	{{--<label for="inputEmail" class="visually-hidden">Role</label>
+    <input type="role" id="role" class="form-control" placeholder="Role" name="role" autofocus="">--}}
+    <label for="inputPassword" class="visually-hidden">Password</label>
+    <input type="password" id="password" class="form-control" placeholder="Password" name="password">
+    <div class="checkbox mb-3">
+     
+    </div>
+    <button class="w-100 btn btn-lg btn-primary" type="submit">Sign Up</button>
+    
+  </form>
+</main>      
+		
 	</div>
+</div>
+	
 </body><!-- This templates was made by Colorlib (https://colorlib.com) -->
 
 </html>

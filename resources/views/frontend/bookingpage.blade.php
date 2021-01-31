@@ -166,13 +166,18 @@ select:focus {
 <body>
 
 <div class="header">
-  <a href="#default" class="logo">Online Bus Ticket Booking System</a>
+  <a href="{{route('frontpage')}}"style="text-decoration: none" class="logo">Online Bus Ticket Booking System</a>
   <div class="header-right">
-    <a class="" href="{{route('frontpage')}}">Home</a>
-    <a href="{{route('userform')}}">Sign In</a>
-    <a href="{{route('loginform')}}">Log In</a>
-    <a href="{{route('frontpage')}}">Contact Us</a>
-    <a href="{{route('frontpage')}}">FAQ</a>
+    <a class="" href="{{route('frontpage')}}" style="margin-right: 15px;
+    text-decoration: none">Home</a>
+    @guest<a href="{{route('userform')}}" style="margin-right: 15px;
+    text-decoration: none">Sign In</a>@endguest
+    @guest<a href="{{route('loginform')}}" style="margin-right: 15px;
+    text-decoration: none">Log In</a>@endguest
+     @auth<a href="{{route('logout')}}" style="margin-right: 15px;
+    text-decoration: none">Log Out</a>@endauth
+    
+    
   </div>
 </div>
 
@@ -224,7 +229,8 @@ select:focus {
 <form method="post" action="{{route('frontend.homepagestore')}}">
 @csrf
         <div class="row">
-            <div class="col-sm-6"> <select class="browser-default custom-select mb-4" required id="from" name="from">
+            <div class="col-sm-6"> 
+            <select class="browser-default custom-select mb-4" required id="from" name="from">
                     								
 	                  <option>From</option>
 

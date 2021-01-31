@@ -3,49 +3,41 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use App\Models\Admin;
 
 class AdminsController extends Controller
 {
-    public function registrationform()
+    public function adminlogin()
     {
-        return view('rej');
-    }
-    public function registrationview()
-    {
-        return view('rejview');
+        return view('adminlogin');
     }
 
-    public function store(Request $request){
+    public function loginProcess(Request $request){
 
-      
+        //dd($request->all());
 
-        $this->validate($request,[
-         'name' =>  'required',
-         'email' =>  'required',
-         'contact' =>  'required',
-         'address' =>  'required',
-         'password'=>'required',
-        ]);
 
-     
+        $login = $request->only('email', 'password');
+        //dd($login);
+
+        if (Auth::attempt($login)) {  
+           // dd(auth()->user());
+            return redirect()->route('dashboard');
+        }else{
+
+            return redirect()->back()->with('msg','Invalid Credential');
+        }
+       
+    }
+    public function logouts()
+    {
+
+  Auth::logout();
+  return redirect()->back();
+
+    }
  
-        $admins = new Admin();
-        $admins->name  = $request->input('name');
-        $admins->email  = $request->input('email');
-        $admins->phone  = $request->input('contact');
-        $admins->Adress  = $request->input('address');
-        $admins->password  = $request->input('password');
-        $admins->save();
-
-        
-        
- 
-        return redirect()->back()->with('msg','Registration Successfully.');
-        
-
-}
-
 }
 
 

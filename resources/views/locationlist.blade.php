@@ -24,8 +24,8 @@
      
      <td class="text-center">
      <a href="{{route('locationedit',$locationlist->id)}}"class="btn btn-primary">Edit</a>
-     <a href=""class="btn btn-danger">Delete</a>
-     <a href=""class="btn btn-warning">View</a>
+     <a href="{{route('locationdelete',$locationlist->id)}}"class="btn btn-danger">Delete</a>
+     
      
      </td>
      

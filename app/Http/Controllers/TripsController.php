@@ -63,14 +63,14 @@ class TripsController extends Controller
 
         $trips =  Trip::with('location')->get();
         $trips =  Trip::with('locationto')->get();
-        // dd($trips);
+      // dd($trip);
         
         
         //$buses = Bus::with('buses')->get();
         
-        $homepages =Homepage::all();
-        $buses = Bus::all();
-        $locations =Location::all();
+       // $homepages =Homepage::all();
+       // $buses = Bus::all();
+       // $locations =Location::all();
   
         return view('triplist',compact('trips'));
         }

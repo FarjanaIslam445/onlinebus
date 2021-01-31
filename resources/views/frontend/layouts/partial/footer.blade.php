@@ -56,16 +56,18 @@ BANGLADESH</h2>
 
   <div> <a href="{{route('frontpage')}}">the preview page</a></div>
                             
-                        </p>
+             <!--           </p>
                     </div>
                 </div>
                 <img class="img-fluid" src="{{asset('frontend')}}/assets/img/ipad.png" alt="" />
             </div>
         </section>
         <!-- Projects-->
+        <!--
         <section class="projects-section bg-light" id="projects">
             <div class="container">
                 <!-- Featured Project Row-->
+                <!--
                 <div class="row align-items-center no-gutters mb-4 mb-lg-5">
                     <div class="col-xl-8 col-lg-7"><img class="img-fluid mb-3 mb-lg-0" src="{{asset('frontend')}}/assets/bg-masthead.jpg" alt="" ></div>
                     <div class="col-xl-4 col-lg-5">
@@ -76,6 +78,7 @@ BANGLADESH</h2>
                     </div>
                 </div>
                 <!-- Project One Row-->
+                <!--
                 <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
                     <div class="col-lg-6"><img class="img-fluid" src="{{asset('frontend')}}/assets/img/demo-image-01.jpg" alt="" /></div>
                     <div class="col-lg-6">
@@ -91,6 +94,7 @@ BANGLADESH</h2>
                     </div>
                 </div>
                 <!-- Project Two Row-->
+                <!--
                 <div class="row justify-content-center no-gutters">
                     <div class="col-lg-6"><img class="img-fluid" src="{{asset('frontend')}}/assets/img/demo-image-02.jpg" alt="" /></div>
                     <div class="col-lg-6 order-lg-first">
@@ -108,6 +112,7 @@ BANGLADESH</h2>
             </div>
         </section>
         <!-- Signup-->
+        <!--
         <section class="signup-section" id="signup">
             <div class="container">
                 <div class="row">
@@ -123,6 +128,7 @@ BANGLADESH</h2>
             </div>
         </section>
         <!-- Contact-->
+        <!--
         <section class="contact-section bg-black">
             <div class="container">
                 <div class="row">

@@ -67,68 +67,32 @@
                             </a>
                         </li>
                         <li class="sidebar-item">
-                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{route('triplist')}}""
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{route('triplist')}}"
                                 aria-expanded="false">
                                 <i class="fa fa-list" aria-hidden="true"></i>
                                 <span class="hide-menu">Trip List</span>
                             </a>
                         </li>
-                        <li class="sidebar-item">
-                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="counterform"
+                          <li class="sidebar-item">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{route('bookingtable')}}"
                                 aria-expanded="false">
-                                <i class="fa fa-home" aria-hidden="true"></i>
-                                <span class="hide-menu">Counter</span>
+                                <i class="fa fa-list" aria-hidden="true"></i>
+                                <span class="hide-menu">Booking Table</span>
                             </a>
                         </li>
-                        <li class="sidebar-item">
-                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="counterview"
+                         <li class="sidebar-item">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{route('paylist')}}"
                                 aria-expanded="false">
-                                <i class="fa fa-home" aria-hidden="true"></i>
-                                <span class="hide-menu">Counter view</span>
+                                <i class="fa fa-list" aria-hidden="true"></i>
+                                <span class="hide-menu">Payment List</span>
                             </a>
                         </li>
-                        <li class="sidebar-item">
-                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="routform"
-                                aria-expanded="false">
-                                <i class="fa fa-road" aria-hidden="true"></i>
-                                <span class="hide-menu">Route</span>
-                            </a>
-                        </li>
-                        <li class="sidebar-item">
-                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{route('routlist')}}"
-                                aria-expanded="false">
-                                <i class="fa fa-road" aria-hidden="true"></i>
-                                <span class="hide-menu">Route List</span>
-                            </a>
-                        </li>
-                        <li class="sidebar-item">
-                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="Driver"
-                                aria-expanded="false">
-                                <i class="fa fa-user" aria-hidden="true"></i>
-                                <span class="hide-menu">Driver</span>
-                            </a>
-                        </li>
-                        <li class="sidebar-item">
-                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{route('Dvrview')}}"
-                                aria-expanded="false">
-                                <i class="fa fa-user" aria-hidden="true"></i>
-                                <span class="hide-menu">Driver List </span>
-                            </a>
-                        </li>
-                        <li class="sidebar-item">
-                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="reportform"
-                                aria-expanded="false">
-                                <i class="fa fa-info-circle" aria-hidden="true"></i>
-                                <span class="hide-menu">Report</span>
-                            </a>
-                        </li>
-                        <li class="sidebar-item">
-                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{route('reportlist')}}"
-                                aria-expanded="false">
-                                <i class="fa fa-info-circle" aria-hidden="true"></i>
-                                <span class="hide-menu">Report List</span>
-                            </a>
-                        </li>
+
+                        
+                       
+                        
+                       
+                       
                         <li class="text-center p-20 upgrade-btn">
 
                         </li>

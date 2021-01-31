@@ -298,12 +298,12 @@ ol {
 <div class="header">
   <a href="#default" class="logo">Book Your Seat</a>
   <div class="header-right">
-    <a class="" href="{{route('frontpage')}}">Home</a>
-    <a href="{{route('userform')}}">Sign Up</a>
-    @guest<a href="{{route('loginform')}}">Log In</a>@endguest
-    @auth<a href="{{route('logout')}}">Log Out</a>@endauth
-    <a href="#about">Contact Us</a>
-    <a href="#about">FAQ</a>
+    <a class="" href="{{route('frontpage')}}" style="text-decoration: none">Home</a>
+    @guest<a href="{{route('userform')}}" style="text-decoration: none">Sign Up</a>@endguest
+    @guest<a href="{{route('loginform')}}" style="text-decoration: none">Log In</a>@endguest
+    @auth<a href="{{route('logout')}}" style="text-decoration: none">Log Out</a>@endauth
+    <a href="#about"style="text-decoration: none">Contact Us</a>
+    
   </div>
 </div>
 </div>
@@ -312,11 +312,17 @@ ol {
     <button class="btn btn-primary" type="submit">Book</button>
   
 </div>
+<div  style="display:flex; justify-content:flex-end;     margin-right: 51px;
+    margin-top: 20;">
+    <a href="{{route('bookingdetails')}}" class="btn btn-success">Go Deteails</a>
+  
+</div>
 <input type="hidden" value="{{$id}}" name="trip_id">
 <input type="hidden" value="{{$date}}" name="date">
+ 
 <div class="plane">
   <div class="cockpit">
-    <h2>Please select a Seat on{{$date}}</h2>
+    <h1>Please select a Seat on{{$date}}</h1>
   </div>
   <div class="exit exit--front fuselage">
     
@@ -348,12 +354,12 @@ ol {
     <li class="row row--2">
       <ol class="seats" type="A">
         <li class="seat">
-          <input @if(in_array('B1',$booked->toArray())) disabled @endif type="checkbox" value="B1" name="Seat_number[]"id="B2" />
+          <input @if(in_array('B1',$booked->toArray())) disabled @endif type="checkbox" value="B1" name="Seat_number[]"id="B1" />
           <label for="B1">B1</label>
         </li>
         <li class="seat">
           <input @if(in_array('B2',$booked->toArray())) disabled @endif type="checkbox"value="B2" name="Seat_number[]" id="B2" />
-          <label for="2B">2B</label>
+          <label for="B2">B2</label>
         </li>
      
         <li class="seat">

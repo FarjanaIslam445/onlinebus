@@ -53,6 +53,7 @@ public function seatstore (Request $request){
             
             
         ]);
+        //dd($bookingdetails);
     }
     
        return redirect()->back()->with('msg','Submit Successfully.');

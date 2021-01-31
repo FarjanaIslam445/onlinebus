@@ -56,7 +56,7 @@
                         <!-- User profile and search -->
                         <!-- ============================================================== -->
                         <li>
-                            <a class="profile-pic" href="#">
+                            <a class="profile-pic" href="{{route('logouts')}}">
                                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStAxBE4msNbiy5J61HimU1mu5YzTI0rmaD5g&usqp=CAU" alt="user-img" width="36"
                                     class="img-circle"><span class="text-white font-medium">Admin</span></a>
                         </li>

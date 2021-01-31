@@ -35,7 +35,7 @@
      <td class="text-center">
      <a href="{{route('busedit',$list->id)}}"class="btn btn-primary">Edit</a>
      <a href="{{route('busdelete',$list->id)}}"class="btn btn-danger">Delete</a>
-     <a href=""class="btn btn-warning">View</a>
+     
      
      </td>
      

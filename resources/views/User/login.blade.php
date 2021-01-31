@@ -351,14 +351,15 @@ input[type=text]:placeholder {
 <div class="header">
   <a href="#default" class="logo">User Log In</a>
   <div class="header-right">
-    <a class="" href="{{route('frontpage')}}">Home</a>
-    <a href="{{route('userform')}}">Sign In</a>
-    @guest<a href="{{route('loginform')}}">Log In</a>@endguest
-    @auth<a href="{{route('logout')}}">Log Out</a>@endauth
-    <a href="{{route('frontpage')}}">Contact Us</a>
-    <a href="{{route('frontpage')}}">FAQ</a>
+    <a class="" href="{{route('frontpage')}}"style="text-decoration: none">Home</a>
+    @guest<a href="{{route('userform')}}"style="text-decoration: none">Sign In</a>@endguest
+    @guest<a href="{{route('loginform')}}"style="text-decoration: none">Log In</a>@endguest
+    @auth<a href="{{route('logout')}}"style="text-decoration: none">Log Out</a>@endauth
+    <a href="{{route('frontpage')}}"style="text-decoration: none">Contact Us</a>
+    
   </div>
 </div>
+
 
 
 

@@ -8,11 +8,11 @@
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="frontpage">Home</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="userform">Sign Up</a></li>
-                        <li class="nav-item">@guest<a class="nav-link js-scroll-trigger" href="login">Log In</a>@endguest</li>
+                        <li class="nav-item">@guest<a class="nav-link js-scroll-trigger" href="userform">Sign In</a>@endguest</li>
+                        <li class="nav-item">@guest<a class="nav-link js-scroll-trigger" href="{{route('loginform')}}">Log In</a>@endguest</li>
                         <li class="nav-item">@auth<a class="nav-link js-scroll-trigger" href="{{route('logout')}}">Logout</a>@endauth</li>
                         <li class="nav-item"><a Contact class="nav-link js-scroll-trigger" href="#about">Contact Us</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">FAQ</a></li>
+                        
                     </ul>
                 </div>
             </div>

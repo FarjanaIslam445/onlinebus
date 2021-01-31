@@ -97,7 +97,7 @@
   </div>
   <div class="form-group">
     <label for="contact">Price</label>
-    <input type="number" class="form-control" required id="price" name="price"placeholder="">
+    <input type="number" class="form-control" required id="price" name="price"  min="0" oninput="validity.valid||(value='')"; placeholder="">
   </div>
   
   

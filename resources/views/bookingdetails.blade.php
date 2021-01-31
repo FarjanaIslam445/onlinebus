@@ -74,22 +74,23 @@ body {
 <body>
 
 <div class="header">
-  <a href="#default" class="logo">Online Bus Ticket Booking System</a>
+  <a href="{{route('frontpage')}}" style="text-decoration: none" class="logo">Online Bus Ticket Booking System</a>
   <div class="header-right">
-    <a class="" href="{{route('frontpage')}}">Home</a>
-    <a href="{{route('userform')}}">Sign In</a>
-    @guest<a href="{{route('loginform')}}">Log In</a>@endguest
-    @auth<a href="{{route('logout')}}">Log Out</a>@endauth
-    <a href="{{route('frontpage')}}">Contact Us</a>
-    <a href="{{route('frontpage')}}">FAQ</a>
+    <a class="" href="{{route('frontpage')}}" style="text-decoration: none">Home</a>
+    @guest<a href="{{route('userform')}}"style="text-decoration: none">Sign In</a>@endguest
+    @guest<a href="{{route('loginform')}}"style="text-decoration: none">Log In</a>@endguest
+    @auth<a href="{{route('logout')}}"style="text-decoration: none">Log Out</a>@endauth
+    
   </div>
 </div>
 
-
-
+{{--<div  style="display:flex; justify-content:flex-end;     margin-right: 51px;
+    margin-top: 20;">
+<a href="{{route('Payment')}}" class="btn btn-success">Payment</a>
+</div>--}}
 </body>
 <body>
-
+<p>Please send your money with in 5 minite.Other wise your booking will be cancel</p>
 <div class="container">
   <h1>Booking Details</h1>
              
@@ -98,22 +99,26 @@ body {
       <tr>
     <th>SL</th>
     <th>Booking ID</th>
-    <th>Seat Number</th>
-    <th>Price</th>
+  
     <th>Journey Date</th>
     <th>Trip ID</th>
-    
+    <th class="text-center">Action</th>
       </tr>
+   
  @foreach ($bookingdeta as $key=>$bookingdel )
 
     <tr>
         <td>{{$key + 1}}</td>
-        <td>{{$bookingdel->booking_id}}</td>
-        <td>{{$bookingdel->seat_number}}</td>
-        <td>{{$bookingdel->price}}</td>
+        <td>{{$bookingdel->id}}</td>
+        {{-- <td>{{$bookingdel->seat_number}}</td> --}}
+        {{-- <td>{{$bookingdel->price}}</td> --}}
         <td>{{$bookingdel->journey_date}}</td>
         <td>{{$bookingdel->trip_id}}</td>
-        
+        <td class="text-center">
+       
+      
+     <a href="{{route('payment',$bookingdel->id )}}" class="btn btn-success">Payment</a>
+     
     </tr>
         
     @endforeach
