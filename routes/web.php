@@ -90,7 +90,7 @@ Route::group(['middleware'=>['auth','admin']],function(){
     Route::get('/', function () {
         return view('master');
         })->name('dashboard');
-    
+
 
 //Route For Bus Details Form
 Route::get('/Bus',[BusController::class,'busform'])->name('bus');
@@ -125,6 +125,7 @@ Route::get('/triplist',[TripsController::class,'triplist'])->name('triplist');
 Route::get('/tripedit/{id}',[TripsController::class,'tripedit'])->name('tripedit');
 Route::post('/tripupdate/{id}',[TripsController::class,'tripupdate'])->name('tripupdate');
 Route::get('/tripdelete/{id}',[TripsController::class,'tripdelete'])->name('tripdelete');
+Route::get('/cache',[TripsController::class,'index'])->name('cache');
 //Route For Route
 Route::get('/routform',[RoutsController::class,'routform'])->name('routform');
 Route::post('/routstore',[RoutsController::class,'routstore'])->name('routstore');

@@ -11,13 +11,13 @@ class Trip extends Model
     public function location()
     {
         return $this->belongsTo(Location::class,'location_from','id');
-    
+
     }
-   
+
     public function locationto()
     {
         return $this->belongsTo(Location::class,'location_to','id');
-    
+
     }
-   
+
 }
